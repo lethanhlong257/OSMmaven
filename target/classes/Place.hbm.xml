@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="models.Place" table="place">
+        <meta attribute="class-description">
+            Lớp này chưa thông tin chi tiết về các địa điểm
+        </meta>
+        <id name="id" type="int" column="id">
+            <generator class="native" />
+        </id>
+        <property name="active" column="active" type="boolean"  />
+        <property name="city" column="city" type="string" length="30" />
+        <property name="country" column="country" type="string" length="20" />
+        <property name="description" column="description" type="string" length="2000" />
+        <property name="district" column="district" type="string" length="20" />
+        <property name="img" column="img" type="string" length="200" />
+        <property name="zipCode" column="zipCode" type="int" />
+        <property name="ward" column="ward" type="string" length="20" />
+        <property name="street2" column="street2" type="string" length="100" />
+        <property name="street1" column="street1" type="string" length="100" />
+        <property name="state" column="state" type="string" length="20" />
+        <property name="phone" column="phone" type="long" />
+        <property name="name" column="name" type="string" length="50" />
+        <property name="longtitude_second" column="longtitude_second" type="float" />
+        <property name="latitude_second" column="latitude_second" type="float" />
+    </class>
+</hibernate-mapping>
